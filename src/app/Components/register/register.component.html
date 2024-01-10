@@ -1,0 +1,72 @@
+<!-- 
+<div class="card-body">
+
+<div class="signup-container">
+    <h2>Signup</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" [(ngModel)]="user.name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" [(ngModel)]="user.email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" [(ngModel)]="user.password" required>
+      </div>
+      <div class="form-group">
+        <label for="roles">Roles</label>
+        <input type="text" id="roles" name="roles" [(ngModel)]="user.roles">
+      </div>
+      <button type="submit">Signup</button>
+    </form>
+  </div>
+</div> -->
+
+
+<div class="container">
+    <div class="card bg-success text-white" style="max-width: 400px; top: 100px; margin: 0 auto;">
+      <div class="card-body">
+        <h5 class="card-title">Registration Form</h5>
+        <form #register="ngForm" (ngSubmit)="userRegister(register.value)">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" [(ngModel)]="user.name" class="form-control">
+          </div>
+    
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" [(ngModel)]="user.email" class="form-control">
+          </div>
+    
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" [(ngModel)]="user.password" class="form-control">
+          </div>
+    
+          <div class="form-group">
+            <label for="roles">Role</label>
+            <select id="roles" name="roles" [(ngModel)]="user.roles" class="form-control" required>
+              <option value="" disabled>Select a role</option>
+              <option value="projectmanager">Project Manager</option>
+              <option value="contractor">Contractor</option>
+              <option value="supervisor">Supervisor</option>
+            </select>
+          </div>
+
+          <hr>
+
+          <div class="d-flex justify-content-end"> <!-- Use "mt-auto" for margin-top -->
+            <button type="submit" class="btn mx-2 btn-light">Signup</button>
+            <button type="button" class="btn btn-light"[routerLink]="['/login']">Login</button>
+        </div>
+    
+         
+        </form>
+      </div>
+    </div>
+</div>
+
+  

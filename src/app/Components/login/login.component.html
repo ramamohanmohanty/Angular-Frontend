@@ -1,0 +1,30 @@
+<div class="container"  style="background-image: url('https://cdn.pixabay.com/photo/2018/07/14/15/27/cafe-3537801_1280.jpg');  background-size: 100% auto; background-repeat: no-repeat; background-attachment: fixed; height: 100vh;">
+    <div class="card bg-success text-white" style="max-width: 400px; top: 100px; margin: 0 auto;">
+      <div class="card-body">
+        <h5 class="card-title">Login Form</h5>
+        <form #login="ngForm" (ngSubmit)="userLogin(login.value)" >
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" ngModel class="form-control">
+          </div>
+    
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" ngModel class="form-control">
+          </div>
+          <hr>
+
+          <div class="d-flex justify-content-end"> <!-- Use "mt-auto" for margin-top -->
+            <!-- <button class="btn mx-2 btn-light" [routerLink]="['/signup']">Signup</button> -->
+            <button type="submit" class="btn btn-light">Login</button>
+        </div>
+     
+         
+        </form>
+      </div>
+    </div>
+</div>
+
+
+
+
